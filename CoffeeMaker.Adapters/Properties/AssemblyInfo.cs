@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("CoffeeMaker.Adaptors")]
+[assembly: AssemblyTitle("CoffeeMaker.Adapters")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("Mads DJ")]
-[assembly: AssemblyProduct("CoffeeMaker.Adaptors")]
+[assembly: AssemblyProduct("CoffeeMaker.Adapters")]
 [assembly: AssemblyCopyright("Copyright © Mads DJ 2018")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("f9740d4d-9591-403f-947a-152422a75e02")]
+[assembly: Guid("e6491d9b-7bbc-4870-b4ad-efd4832e69ac")]
 
 // Version information for an assembly consists of the following four values:
 //

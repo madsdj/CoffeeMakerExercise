@@ -2,7 +2,7 @@
 using CoffeeMaker.Domain;
 using Api = CoffeeMaker.Hardware.Api;
 
-namespace CoffeeMaker.Adaptors
+namespace CoffeeMaker.Adapters
 {
     public class ReliefValveSwitch : ISwitch<ReliefValveState>
     {

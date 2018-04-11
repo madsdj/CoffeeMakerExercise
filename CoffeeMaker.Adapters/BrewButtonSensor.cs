@@ -2,23 +2,23 @@
 using CoffeeMaker.Domain;
 using Api = CoffeeMaker.Hardware.Api;
 
-namespace CoffeeMaker.Adaptors
+namespace CoffeeMaker.Adapters
 {
-    public class WaterLevelSensor : ISensor<WaterLevelStatus>, IUpdatable
+    public class BrewButtonSensor : ISensor<BrewButtonStatus>, IUpdatable
     {
         private readonly Api.ICoffeeMaker _api;
 
-        public WaterLevelSensor(Api.ICoffeeMaker api)
+        public BrewButtonSensor(Api.ICoffeeMaker api)
         {
             _api = api ?? throw new ArgumentNullException(nameof(api));
         }
 
         public event EventHandler StatusChanged;
-        public WaterLevelStatus Status { get; private set; }
+        public BrewButtonStatus Status { get; private set; }
 
         public void Update()
         {
-            var status = Map(_api.GetBoilerStatus());
+            var status = Map(_api.GetBrewButtonStatus());
             if (Status != status)
             {
                 Status = status;
@@ -26,12 +26,12 @@ namespace CoffeeMaker.Adaptors
             }
         }
 
-        private WaterLevelStatus Map(Api.BoilerStatus status)
+        private BrewButtonStatus Map(Api.BrewButtonStatus status)
         {
             switch (status)
             {
-                case Api.BoilerStatus.EMPTY: return WaterLevelStatus.Empty;
-                case Api.BoilerStatus.NOT_EMPTY: return WaterLevelStatus.NotEmpty;
+                case Api.BrewButtonStatus.PUSHED: return BrewButtonStatus.Pushed;
+                case Api.BrewButtonStatus.NOT_PUSHED: return BrewButtonStatus.NotPushed;
                 default: throw new NotSupportedException();
             }
         }

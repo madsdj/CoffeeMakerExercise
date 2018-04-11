@@ -50,9 +50,9 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\CoffeeMaker.Adaptors\CoffeeMaker.Adaptors.csproj">
-      <Project>{f9740d4d-9591-403f-947a-152422a75e02}</Project>
-      <Name>CoffeeMaker.Adaptors</Name>
+    <ProjectReference Include="..\CoffeeMaker.Adapters\CoffeeMaker.Adapters.csproj">
+      <Project>{e6491d9b-7bbc-4870-b4ad-efd4832e69ac}</Project>
+      <Name>CoffeeMaker.Adapters</Name>
     </ProjectReference>
     <ProjectReference Include="..\CoffeeMaker.Domain\CoffeeMaker.Domain.csproj">
       <Project>{d0067941-e4ae-4d12-a6e6-faf06ad9065c}</Project>

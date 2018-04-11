@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Timers;
-using CoffeeMaker.Adaptors;
+using CoffeeMaker.Adapters;
 using CoffeeMaker.Domain;
 using Api = CoffeeMaker.Hardware.Api;
 
