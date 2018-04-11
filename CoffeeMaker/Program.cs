@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using System.Timers;
 using CoffeeMaker.Adapters;
 using CoffeeMaker.Domain;
-using Api = CoffeeMaker.Hardware.Api;
 
 namespace CoffeeMaker
 {
@@ -11,7 +10,7 @@ namespace CoffeeMaker
     {
         static void Main(string[] args)
         {
-            Api.ICoffeeMaker api = new CoffeeMakerSimulator();
+            var api = new CoffeeMakerSimulator();
 
             var brewButtonSensor = new BrewButtonSensor(api);
             var waterLevelSensor = new WaterLevelSensor(api);
@@ -29,7 +28,12 @@ namespace CoffeeMaker
             var updatables = new List<IUpdatable> { brewButtonSensor, waterLevelSensor, warmerPlateSensor };
 
             Timer timer = new Timer(TimeSpan.FromSeconds(1).TotalMilliseconds);
-            timer.Elapsed += (s, e) => updatables.ForEach(u => u.Update());
+            timer.Elapsed += (s, e) =>
+            {
+                api.Tick();
+                updatables.ForEach(u => u.Update());
+            };
+
             timer.Start();
 
             while (true)
