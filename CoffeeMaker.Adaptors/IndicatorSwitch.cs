@@ -4,26 +4,26 @@ using Api = CoffeeMaker.Hardware.Api;
 
 namespace CoffeeMaker.Adaptors
 {
-    public class BoilerSwitch : ISwitch<BoilerState>
+    public class IndicatorSwitch : ISwitch<IndicatorState>
     {
         private readonly Api.ICoffeeMaker _api;
 
-        public BoilerSwitch(Api.ICoffeeMaker api)
+        public IndicatorSwitch(Api.ICoffeeMaker api)
         {
             _api = api ?? throw new ArgumentNullException(nameof(api));
         }
 
-        public void Set(BoilerState state)
+        public void Set(IndicatorState state)
         {
-            _api.SetBoilerState(Map(state));
+            _api.SetIndicatorState(Map(state));
         }
 
-        private Api.BoilerState Map(BoilerState state)
+        private Api.IndicatorState Map(IndicatorState state)
         {
             switch (state)
             {
-                case BoilerState.On: return Api.BoilerState.ON;
-                case BoilerState.Off: return Api.BoilerState.OFF;
+                case IndicatorState.On: return Api.IndicatorState.ON;
+                case IndicatorState.Off: return Api.IndicatorState.OFF;
                 default: throw new NotSupportedException();
             }
         }

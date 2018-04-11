@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CoffeeMaker.Domain", "Coffe
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CoffeeMaker.Adaptors", "CoffeeMaker.Adaptors\CoffeeMaker.Adaptors.csproj", "{F9740D4D-9591-403F-947A-152422A75E02}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CoffeeMaker.Hardware.Api", "CoffeeMaker.Hardware.Api\CoffeeMaker.Hardware.Api.csproj", "{32366E11-5CB4-400E-A4D7-698AC00B07B6}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{F9740D4D-9591-403F-947A-152422A75E02}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F9740D4D-9591-403F-947A-152422A75E02}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F9740D4D-9591-403F-947A-152422A75E02}.Release|Any CPU.Build.0 = Release|Any CPU
+		{32366E11-5CB4-400E-A4D7-698AC00B07B6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{32366E11-5CB4-400E-A4D7-698AC00B07B6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{32366E11-5CB4-400E-A4D7-698AC00B07B6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{32366E11-5CB4-400E-A4D7-698AC00B07B6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

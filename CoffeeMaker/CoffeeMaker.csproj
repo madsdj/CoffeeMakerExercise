@@ -42,6 +42,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CoffeeMakerSimulator.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -56,6 +57,10 @@
     <ProjectReference Include="..\CoffeeMaker.Domain\CoffeeMaker.Domain.csproj">
       <Project>{d0067941-e4ae-4d12-a6e6-faf06ad9065c}</Project>
       <Name>CoffeeMaker.Domain</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CoffeeMaker.Hardware.Api\CoffeeMaker.Hardware.Api.csproj">
+      <Project>{32366e11-5cb4-400e-a4d7-698ac00b07b6}</Project>
+      <Name>CoffeeMaker.Hardware.Api</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
