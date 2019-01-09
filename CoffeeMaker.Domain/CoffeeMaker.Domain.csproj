@@ -48,6 +48,7 @@
     <Compile Include="ISwitch.cs" />
     <Compile Include="IUpdatable.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ReadyIndicator.cs" />
     <Compile Include="ReliefValve.cs" />
     <Compile Include="ReliefValveState.cs" />
     <Compile Include="WarmerPlate.cs" />

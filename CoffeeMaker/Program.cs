@@ -24,10 +24,11 @@ namespace CoffeeMaker
             var boiler = new Boiler(brewButtonSensor, waterLevelSensor, boilerSwitch);
             var warmerPlate = new WarmerPlate(warmerPlateSensor, warmerPlateSwitch);
             var reliefValve = new ReliefValve(warmerPlateSensor, reliefValveSwitch);
+            var readyIndicator = new ReadyIndicator(brewButtonSensor, waterLevelSensor, indicatorSwitch);
 
             var updatables = new List<IUpdatable> { brewButtonSensor, waterLevelSensor, warmerPlateSensor };
 
-            Timer timer = new Timer(TimeSpan.FromSeconds(1).TotalMilliseconds);
+            Timer timer = new Timer(TimeSpan.FromMilliseconds(100).TotalMilliseconds);
             timer.Elapsed += (s, e) =>
             {
                 api.Tick();
@@ -39,6 +40,15 @@ namespace CoffeeMaker
             while (true)
             {
                 string command = Console.ReadLine();
+                if (command == "exit") break;
+                if (command == "brew") api.PressBrewButton();
+                if (command == "empty") api.EmptyCoffee();
+                if (command == "refill") api.RefillWater();
+                if (command == "insert") api.InsertPot();
+                if (command == "remove") api.RemovePot();
+
+                Console.Clear();
+                api.Print();
             }
         }
     }
