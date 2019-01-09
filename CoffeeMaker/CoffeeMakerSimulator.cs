@@ -94,12 +94,12 @@ namespace CoffeeMaker
         {
             Console.WriteLine();
             Console.WriteLine($"Ready indicator:     {_readyIndicator}");
-            Console.WriteLine($"Warmer state:        {_warmerState}");
             Console.WriteLine($"Boiler state:        {_boilerState}");
+            Console.WriteLine($"Warmer state:        {_warmerState}");
             Console.WriteLine($"Relief valve state:  {_reliefValveState}");
             Console.WriteLine();
-            Console.WriteLine($"Warmer plate status: {GetWarmerPlateStatus()}");
             Console.WriteLine($"Boiler status:       {GetBoilerStatus()}");
+            Console.WriteLine($"Warmer plate status: {GetWarmerPlateStatus()}");
             Console.WriteLine();
             Console.WriteLine($"Water level:         {_waterLevel} %");
             Console.WriteLine($"Coffee level:        {_coffeeLevel} %");
