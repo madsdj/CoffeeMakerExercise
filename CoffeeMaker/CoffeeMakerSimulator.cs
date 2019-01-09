@@ -65,7 +65,7 @@ namespace CoffeeMaker
             _waterLevel = 100;
         }
 
-        public void EmptyCoffee()
+        public void DrinkCoffee()
         {
             _coffeeLevel = 0;
         }

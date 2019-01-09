@@ -28,7 +28,7 @@ namespace CoffeeMaker
 
             var updatables = new List<IUpdatable> { brewButtonSensor, waterLevelSensor, warmerPlateSensor };
 
-            Timer timer = new Timer(TimeSpan.FromMilliseconds(100).TotalMilliseconds);
+            Timer timer = new Timer(TimeSpan.FromSeconds(0.1).TotalMilliseconds);
             timer.Elapsed += (s, e) =>
             {
                 api.Tick();
@@ -42,7 +42,7 @@ namespace CoffeeMaker
                 string command = Console.ReadLine();
                 if (command == "exit") break;
                 if (command == "brew") api.PressBrewButton();
-                if (command == "empty") api.EmptyCoffee();
+                if (command == "drink") api.DrinkCoffee();
                 if (command == "refill") api.RefillWater();
                 if (command == "insert") api.InsertPot();
                 if (command == "remove") api.RemovePot();
